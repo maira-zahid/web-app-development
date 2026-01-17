@@ -1,46 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task no 01</title>
+    <title>Task no 02</title>
     <style>
-        .h-1{
+        body {
+            background-color: yellowgreen;
+        }
+
+        #head {
             text-align: center;
-            font-size: 60px;
+            justify-content: center;
         }
-        img{
-            margin-left: 45%;
-        }
-        .para{
+
+        #para-1 {
+             margin-left: 100px;
+             margin-right: 100px;
             text-align: center;
-            font-size: 20px;
         }
-        button{
-             margin-left: 47%;
-             border: 1px solid gray;
-             border-radius: 30px;
-             padding: 15px;
-             padding-left: 20px;
-             padding-right: 20px;
+
+        #btn-1 {
+            background-color: black;
+            color: white;
+            border-radius: 35px;
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        #img-1 {
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+
+        #main-div {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            border-radius: 20px;
+            margin-top: 5px;
+            margin-left: 450px;
+            margin-right: 400px;
+        }
+
+        #img-2 {
+            padding-right: 25px;
+            padding-left: 20px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        #h-1 {
+            padding-top: 30px;
+            font-size: 40px;
+        }
+
+        #btn-2 {
+            border: 1px solid greenyellow;
+            border-radius: 20px;
+            color: white;
+            background-color: black;
+            padding-left: 15px;
+            padding-bottom: 10px;
+            padding-right: 15px;
+            padding-top: 10px;
         }
     </style>
 </head>
+
 <body>
-    <h1 class="h-1">Efficient HVAC <br> Solutions</h1>
-    <img src="./img.jpeg" alt="img" width="200" height="200">
-    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, tempora corrupti quam labore aliquid, doloremque  <br> eos earum eligendi nesciunt explicabo, veniam officia sequi esse? Doloremque, veniam illo! Velit, quae quasi.</p>
-    <button>Contact</button>
-    <hr><hr>
-    <h1>Our Expertise</h1>
-    <p>State-of-the-Art Solutions</p>
-    <div style="background-color: gray;">
-        <h2>24/7 Emergency HVAC Service</h2>
-        <p>Energy-Efficient Systems</p>
-    </div>
-    <div style="background-color: gray;">
-        <h2>Indoor Air Quality</h2>
-        <p>Optimizing Air Circulation</p>
+    <div id="main-part">
+        <div id="head">
+            <h1 id="hero">Ready to go with Brevo?</h1>
+            <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde totam magnam, quos esse error
+                deleniti inventore tempore accusantium <br>fugiat nihil repellat dolores facere ut officia qui sequi dolor,
+                laborum nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Itaque ipsam dolorem quod necessitatibus alias corporis reiciendis cumque debitis amet eveniet sapiente <br>
+                repellendus nemo aperiam excepturi assumenda illo iure, iste neque.</p>
+            <button id="btn-1">Sign up for free</button>
+            <br><br>
+            <img id="img-1" src="./pic-1.png" alt="pic-1" width="300" height="350">
+            <br><br>
+        </div>
+        <div id="main-div" display="inline-block">
+            <img id="img-2" src="./pic-2.webp" alt="pic-2" width="400" height="200">
+            <div class="main-div">
+                <h1 id="h-1">Ready to go with Brevo?</h1>
+                <p id="para-2">Get the tools you need to reach your customers and grow your business.</p>
+                <button id="btn-2">Learn more</button>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
