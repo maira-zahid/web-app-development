@@ -4,96 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task no 02</title>
+    <title>Task no 03</title>
     <style>
-        body {
-            background-color: yellowgreen;
-        }
-
-        #head {
+        #top {
             text-align: center;
-            justify-content: center;
+            color: green;
         }
 
-        #para-1 {
-             margin-left: 100px;
-             margin-right: 100px;
+        .top {
             text-align: center;
+            font-size: 50px;
         }
-
-        #btn-1 {
-            background-color: black;
-            color: white;
-            border-radius: 35px;
-            padding: 10px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        #img-1 {
-            border: 1px solid white;
-            border-radius: 10px;
-        }
-
-        #main-div {
-            background-color: black;
-            color: white;
+        .sides{
             display: flex;
             flex-direction: row;
-            border-radius: 20px;
-            margin-top: 5px;
-            margin-left: 450px;
-            margin-right: 400px;
         }
 
-        #img-2 {
-            padding-right: 25px;
-            padding-left: 20px;
+        .p-1 {
+            border: 2px solid whitesmoke;
+            padding: 20px;
+            /* margin-right: 900px; */
+            margin-left: 150px;
+            padding-left: 50px;
             padding-top: 30px;
-            padding-bottom: 30px;
-            border: 1px solid black;
-            border-radius: 5px;
+            padding-bottom: 30px ;
+            font-size: 30px;
         }
 
-        #h-1 {
-            padding-top: 30px;
-            font-size: 40px;
-        }
-
-        #btn-2 {
-            border: 1px solid greenyellow;
-            border-radius: 20px;
+        .green {
             color: white;
-            background-color: black;
-            padding-left: 15px;
-            padding-bottom: 10px;
-            padding-right: 15px;
-            padding-top: 10px;
+            background-color: green;
+            padding: 20px;
+            /* margin-right: 5px;  */
+            margin-left: 150px;
+            padding-left: 50px;
+            padding-right: 450px;
+            padding-top: 30px;
+            padding-bottom: 30px ;
+            font-size: 30px;
+        }
+
+        #right-side {
+            margin-right: 900px;
+            margin-left: 50px;
+            padding-top: 25px;
+        }
+        .h-2{
+            font-size: 50px;
         }
     </style>
 </head>
 
 <body>
-    <div id="main-part">
-        <div id="head">
-            <h1 id="hero">Ready to go with Brevo?</h1>
-            <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde totam magnam, quos esse error
-                deleniti inventore tempore accusantium <br>fugiat nihil repellat dolores facere ut officia qui sequi dolor,
-                laborum nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                Itaque ipsam dolorem quod necessitatibus alias corporis reiciendis cumque debitis amet eveniet sapiente <br>
-                repellendus nemo aperiam excepturi assumenda illo iure, iste neque.</p>
-            <button id="btn-1">Sign up for free</button>
-            <br><br>
-            <img id="img-1" src="./pic-1.png" alt="pic-1" width="300" height="350">
-            <br><br>
+    <p id="top">OUR SERVICES</p>
+    <h1 class="top">We Can Help You With This Situation</h1>
+    <div class="sides">
+        <div id="left-side">
+            <p class="green">Relation Problem</p>
+            <p class="p-1">Couple Councelling</p>
+            <p class="p-1">Depression Treatment</p>
+            <p class="p-1">Family Problem</p>
+            <p class="p-1">Personal Problem</p>
+            <p class="p-1">Business Problem</p>
         </div>
-        <div id="main-div" display="inline-block">
-            <img id="img-2" src="./pic-2.webp" alt="pic-2" width="400" height="200">
-            <div class="main-div">
-                <h1 id="h-1">Ready to go with Brevo?</h1>
-                <p id="para-2">Get the tools you need to reach your customers and grow your business.</p>
-                <button id="btn-2">Learn more</button>
-            </div>
+        <div id="right-side">
+            <img src="./img.jpg" alt="img" width="700" height="500">
+            <h1 class="h-2">Relation Problem</h1>
+            <p>Far for away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                blind
+                texts. Seprated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas hic, assumenda optio eius vel neque illum iste
+                 dolorem quidem ipsam quo? Officia sapiente unde expedita animi minima nulla reprehenderit laboriosam.
+            </p>
         </div>
     </div>
 </body>
