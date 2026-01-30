@@ -2,100 +2,214 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task no 02</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
         body {
-            background-color: yellowgreen;
-        }
-
-        #head {
-            text-align: center;
-            justify-content: center;
-        }
-
-        #para-1 {
-             margin-left: 100px;
-             margin-right: 100px;
-            text-align: center;
-        }
-
-        #btn-1 {
-            background-color: black;
-            color: white;
-            border-radius: 35px;
-            padding: 10px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        #img-1 {
-            border: 1px solid white;
-            border-radius: 10px;
-        }
-
-        #main-div {
-            background-color: black;
-            color: white;
+            min-height: 100vh;
             display: flex;
-            flex-direction: row;
-            border-radius: 20px;
-            margin-top: 5px;
-            margin-left: 450px;
-            margin-right: 400px;
+            justify-content: center;
+            align-items: center;
+            background: #0e9ad6;
         }
 
-        #img-2 {
-            padding-right: 25px;
-            padding-left: 20px;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            border: 1px solid black;
-            border-radius: 5px;
+        .card {
+            width: 360px;
+            background: linear-gradient(180deg, #1fb6ff, #149ed8);
+            border-radius: 18px;
+            padding: 28px 22px 30px;
+            color: #fff;
         }
 
-        #h-1 {
-            padding-top: 30px;
-            font-size: 40px;
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 10px;
         }
 
-        #btn-2 {
-            border: 1px solid greenyellow;
-            border-radius: 20px;
-            color: white;
-            background-color: black;
-            padding-left: 15px;
-            padding-bottom: 10px;
-            padding-right: 15px;
-            padding-top: 10px;
+        .card h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .card .para-1 {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 22px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .info-box .icon {
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            color: #149ed8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .info-box span {
+            font-size: 12px;
+            opacity: 0.8;
+            display: block;
+        }
+
+        .info-box strong {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .stats {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            padding: 14px 16px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin: 26px 0 22px;
+        }
+
+        .stat h2 {
+            margin-bottom: 4px;
+        }
+
+        .stat p {
+            font-size: 11px;
+            opacity: 0.8;
+            letter-spacing: 0.5px;
+            /* letter spacing = extra horizontal space  */
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer span {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .icons a {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 15px;
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
-    <div id="main-part">
-        <div id="head">
-            <h1 id="hero">Ready to go with Brevo?</h1>
-            <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde totam magnam, quos esse error
-                deleniti inventore tempore accusantium <br>fugiat nihil repellat dolores facere ut officia qui sequi dolor,
-                laborum nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                Itaque ipsam dolorem quod necessitatibus alias corporis reiciendis cumque debitis amet eveniet sapiente <br>
-                repellendus nemo aperiam excepturi assumenda illo iure, iste neque.</p>
-            <button id="btn-1">Sign up for free</button>
-            <br><br>
-            <img id="img-1" src="./pic-1.png" alt="pic-1" width="300" height="350">
-            <br><br>
+
+    <div class="card">
+        <div class="tag">
+            <i class="fa-regular fa-comment-dots"></i>
+            GET IN TOUCH
         </div>
-        <div id="main-div" display="inline-block">
-            <img id="img-2" src="./pic-2.webp" alt="pic-2" width="400" height="200">
-            <div class="main-div">
-                <h1 id="h-1">Ready to go with Brevo?</h1>
-                <p id="para-2">Get the tools you need to reach your customers and grow your business.</p>
-                <button id="btn-2">Learn more</button>
+
+        <h1>Let's Bring Your Vision to Life</h1>
+
+        <p class="para-1">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores.
+        </p>
+
+        <div class="info-box">
+            <div class="icon">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+                <span>EMAIL US</span>
+                <strong>support@example.com</strong>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+                <span>CALL US</span>
+                <strong>+1 (555) 890-1234</strong>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+                <span>VISIT US</span>
+                <strong>1847 Oak Avenue, Portland, OR 97201</strong>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <h2>98%</h2>
+                <p>SATISFACTION</p>
+            </div>
+            <div class="stat">
+                <h2>24/7</h2>
+                <p>SUPPORT</p>
+            </div>
+            <div class="stat">
+                <h2>3.2k</h2>
+                <p>PROJECTS</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>Follow Us</span>
+            <div class="icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
