@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Task Example</title>
+<style>
+  /* 1️⃣ Using calc() for dynamic height */
+  header {
+    height: 60px;
+    background-color: #4caf98;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  /* 2️⃣ Layout using Flexbox and Grid */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 2 columns, left sidebar smaller */
+    gap: 10px;
+    height: calc(100vh - 60px); /* full height minus header */
+    padding: 10px;
+  }
+
+  .sidebar {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+
+  .box{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-right: 250px;
+    background-color: antiquewhite;
+  }
+
+  .main {
+    background-color: #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 3️⃣ Animations using @keyframes */
+  @keyframes rotateScale {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+
+  .animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #FF5722;
+    margin: 20px;
+    animation: rotateScale 4s infinite;
+  }
+
+  /* 4️⃣ Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr; /* stack columns on smaller screens */
+      height: auto;
+    }
+    .main {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+      font-size: 16px;
+    }
+    .animated-box {
+      width: 70px;
+      height: 70px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+ Responsive CSS Layout
+</header>
+
+<div class="container">
+  <div class="sidebar">
+    <h3>Menu</h3>
+    <p>CSS calc()</p>
+    <p>Flexbox Layout</p>
+    <p>CSS Grid</p>
+    <p>Keyframes</p>
+    <p class="box">CSS Animations</p>
+    <p>Media Queries</p>
+  </div>
+  <div class="main">
+    <h2>CSS Animations</h2>
+    <div class="animated-box"></div>
+    <br><br><br><br><br><br>
+    <p>NOTE:</p>
+    <p>Resize the window to see media queries in action!</p>
+  </div>
+</div>
+
+</body>
+</html>
