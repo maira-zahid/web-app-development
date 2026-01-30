@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class no 15</title>
+    <style>
+        /* my comments  */
+        /* flex wrap or media query  */
+        /* calc function in css_
+        height: calc(100% - 90px);  */
+        /* @media (min-width: 600px) {
+            .container {
+
+            }
+        } */
+         body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+         }
+         .container{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 40px;
+            flex-direction: column-reverse;
+            /* flex-wrap: wrap;  */
+         }
+         @media(min-width: 900px){
+            .container{
+                background-color: yellow;
+                flex-direction: row;
+            }
+         }
+           /* card  */
+            .box{
+                position: relative;
+                width: 260px;
+                height: 160px;
+                /* width: calc(20%-20px); */
+                border-radius: 16px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .box img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+            }
+            .box::after{
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, o, 0, 0.5);
+                opacity: 0;
+                transition: opacity 0.4s ease;
+            }
+            .box h1{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 20px;
+                margin: 0;
+                z-index: 1;
+                opacity: 0;
+                transition: opacity 0.4s ease;
+
+            }
+            .box:hover::after{
+                opacity: 1;
+            }
+            .box:hover{
+                width: 100%;
+            }
+            .box:hover h1{
+                opacity: 1;
+            }
+             .box:hover img[
+                transform:scale(1.05); 
+            ] 
+            /* 1rem = font-size = 16px  */
+            /* 1em = 1rem  */
+            /* em , rem , px , % , 1fr  */
+             /* calc() [height] , box(2 column for mobile) ,keyframe ,media query (and)   */
+
+    </style>
+</head>
+
+<body>
+    <!-- my comments  -->
+    <!-- position : absolute (inset : 0; means every side is 0)  -->
+    <!-- flex wrap : wrap; -->
+    <!-- inspect - top - left -selector - see the properties  -->
+    <!-- free voice AI generator (murf.ai)  -->
+    <!-- size of text for screens (for large 34 and for small 20 or 24) -->
+     <!-- px(fixed) ,rem(depend upon font size, default [16px=1rem]) ,em(depend upon rem ,[1em=1rem=16px]) ,
+       1fr ,%(change accoding to screen changing by cursor)  -->
+       <!-- nekocalc.com/px-to-rem-calculator  -->
+    <!-- <div class="container">
+
+    </div>  -->
+    <!-- animation , keyframes  -->
+     <!-- practice for students pinterest hover effect  -->
+      <div class="container">
+
+        <div class="box">
+           <img src="./first.jpg" alt="nothing "> 
+           <h1>Coding</h1>
+        </div>
+         <div class="box">
+           <img src="./second.jpg" alt=""> 
+           <h1>Pc Setup</h1>
+        </div>
+         <div class="box">
+           <img src="./third.jpg" alt=""> 
+           <h1>Minimal Room</h1>
+        </div>
+         <div class="box">
+           <img src="./first.jpg" alt=""> 
+           <h1>Minimal Room</h1>
+        </div>
+         <div class="box">
+           <img src="./second.jpg" alt=""> 
+           <h1>Pc Setup</h1>
+        </div>
+         <div class="box">
+           <img src="./third.jpg" alt=""> 
+           <h1>Minimal Room</h1>
+        </div>
+         <div class="box">
+           <img src="./second.jpg" alt=""> 
+           <h1>Pc Setup</h1>
+        </div>
+         <div class="box">
+           <img src="./third.jpg" alt=""> 
+           <h1>Minimal Room</h1>
+        </div>
+         <div class="box">
+           <img src="./second.jpg" alt=""> 
+           <h1>Pc Setup</h1>
+        </div>
+         <div class="box">
+           <img src="./first.jpg" alt=""> 
+           <h1>Coding</h1>
+        </div>
+         <div class="box">
+           <img src="./second.jpg" alt=""> 
+           <h1>Pc Setup</h1>
+        </div>
+         <div class="box">
+           <img src="./third.jpg" alt=""> 
+           <h1>Minimal Room</h1>
+        </div>
+         <div class="box">
+           <img src="./first.jpg" alt=""> 
+           <h1>Coding</h1>
+        </div>
+
+      </div>
+</body>
+
+</html>
