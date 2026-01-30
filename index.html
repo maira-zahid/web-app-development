@@ -1,215 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Card</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Segoe UI", sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Task Example</title>
+<style>
+  /* 1️⃣ Using calc() for dynamic height */
+  header {
+    height: 60px;
+    background-color: #4caf98;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #0e9ad6;
-        }
+  /* 2️⃣ Layout using Flexbox and Grid */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 2 columns, left sidebar smaller */
+    gap: 10px;
+    height: calc(100vh - 60px); /* full height minus header */
+    padding: 10px;
+  }
 
-        .card {
-            width: 360px;
-            background: linear-gradient(180deg, #1fb6ff, #149ed8);
-            border-radius: 18px;
-            padding: 28px 22px 30px;
-            color: #fff;
-        }
+  .sidebar {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
 
-        .tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
+  .box{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-right: 250px;
+    background-color: antiquewhite;
+  }
 
-        .card h1 {
-            font-size: 26px;
-            margin-bottom: 10px;
-        }
+  .main {
+    background-color: #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-        .card .para-1 {
-            font-size: 14px;
-            line-height: 1.6;
-            opacity: 0.9;
-            margin-bottom: 22px;
-        }
+  /* 3️⃣ Animations using @keyframes */
+  @keyframes rotateScale {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
 
-        .info-box {
-            background: rgba(255, 255, 255, 0.12);
-            border-radius: 14px;
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 12px;
-        }
+  .animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #FF5722;
+    margin: 20px;
+    animation: rotateScale 4s infinite;
+  }
 
-        .info-box .icon {
-            width: 40px;
-            height: 40px;
-            background: #fff;
-            color: #149ed8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
+  /* 4️⃣ Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr; /* stack columns on smaller screens */
+      height: auto;
+    }
+    .main {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
 
-        .info-box span {
-            font-size: 12px;
-            opacity: 0.8;
-            display: block;
-        }
-
-        .info-box strong {
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .stats {
-            background: rgba(255, 255, 255, 0.12);
-            border-radius: 14px;
-            padding: 14px 16px;
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
-            margin: 26px 0 22px;
-        }
-
-        .stat h2 {
-            margin-bottom: 4px;
-        }
-
-        .stat p {
-            font-size: 11px;
-            opacity: 0.8;
-            letter-spacing: 0.5px;
-            /* letter spacing = extra horizontal space  */
-        }
-
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer span {
-            font-size: 13px;
-            opacity: 0.9;
-        }
-
-        .icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .icons a {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 15px;
-            text-decoration: none;
-        }
-    </style>
+  @media (max-width: 480px) {
+    header {
+      font-size: 16px;
+    }
+    .animated-box {
+      width: 70px;
+      height: 70px;
+    }
+  }
+</style>
 </head>
-
 <body>
 
-    <div class="card">
-        <div class="tag">
-            <i class="fa-regular fa-comment-dots"></i>
-            GET IN TOUCH
-        </div>
+<header>
+ Responsive CSS Layout
+</header>
 
-        <h1>Let's Bring Your Vision to Life</h1>
-
-        <p class="para-1">
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-            dolores.
-        </p>
-
-        <div class="info-box">
-            <div class="icon">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div>
-                <span>EMAIL US</span>
-                <strong>support@example.com</strong>
-            </div>
-        </div>
-
-        <div class="info-box">
-            <div class="icon">
-                <i class="fa-solid fa-headset"></i>
-            </div>
-            <div>
-                <span>CALL US</span>
-                <strong>+1 (555) 890-1234</strong>
-            </div>
-        </div>
-
-        <div class="info-box">
-            <div class="icon">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div>
-                <span>VISIT US</span>
-                <strong>1847 Oak Avenue, Portland, OR 97201</strong>
-            </div>
-        </div>
-
-        <div class="stats">
-            <div class="stat">
-                <h2>98%</h2>
-                <p>SATISFACTION</p>
-            </div>
-            <div class="stat">
-                <h2>24/7</h2>
-                <p>SUPPORT</p>
-            </div>
-            <div class="stat">
-                <h2>3.2k</h2>
-                <p>PROJECTS</p>
-            </div>
-        </div>
-
-        <div class="footer">
-            <span>Follow Us</span>
-            <div class="icons">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
+<div class="container">
+  <div class="sidebar">
+    <h3>Menu</h3>
+    <p>CSS calc()</p>
+    <p>Flexbox Layout</p>
+    <p>CSS Grid</p>
+    <p>Keyframes</p>
+    <p class="box">CSS Animations</p>
+    <p>Media Queries</p>
+  </div>
+  <div class="main">
+    <h2>CSS Animations</h2>
+    <div class="animated-box"></div>
+    <br><br><br><br><br><br>
+    <p>NOTE:</p>
+    <p>Resize the window to see media queries in action!</p>
+  </div>
+</div>
 
 </body>
-
 </html>
