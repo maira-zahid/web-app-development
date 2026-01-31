@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadoo Travel</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav a {
+            margin-left: 20px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        header nav a.signup {
+            padding: 8px 16px;
+            background-color: #ff6b6b;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 10%;
+        }
+
+        .hero-text {
+            flex: 1 1 500px;
+        }
+
+        .hero-text .red {
+            color: rgb(255, 94, 0);
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #1e2a78;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .hero-text .btn {
+            padding: 12px 25px;
+            background-color: orange;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .btn-2 {
+            color: grey;
+            background-color: white;
+            border: none;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+        }
+
+        .play-btn {
+            width: 30px;
+            height: 30px;
+        }
+
+        .hero-img {
+            flex: 1 1 400px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-img img {
+            width: 300px;
+            border-radius: 20px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .services .p-1 {
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .services-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 15px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+
+        }
+
+
+        .card:hover {
+            transform: scale(1.1);
+            /*1.1 = 110% size */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .card img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Destinations Section */
+        .destinations {
+            padding: 50px 10%;
+        }
+
+        .destinations .p-2 {
+            text-align: center;
+        }
+
+        .destinations h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .dest-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .dest-card {
+            position: relative;
+            /* above  */
+            border: 1px solid white;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: none;
+        }
+
+        .dest-card:hover {
+            transform: scale(1.15) translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .dest-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .dest-card h3 {
+            margin: 15px 0 5px;
+        }
+
+        .dest-card p {
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 14px;
+        }
+
+
+
+        .destinations .bg {
+            position: absolute;
+            top: 1255px;
+            right: 175px;
+            width: 150px;
+            height: auto;
+            width: 150px;
+            height: 150px;
+            pointer-events: none;
+        }
+
+
+        /* logo  */
+        .logo .links {
+            display: flex;
+            flex-direction: row;
+            margin-left: 300px;
+            margin-right: 200px;
+            width: 50px;
+            height: 50px;
+
+        }
+
+        .links img {
+            padding-right: 130px;
+            cursor: pointer;
+        }
+
+        .expedia {
+            height: 100px;
+        }
+
+        .links em {
+            cursor: pointer;
+        }
+
+        /* Booking Steps */
+        .booking {
+            padding: 50px 10%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .booking-text {
+            flex: 1 1 400px;
+        }
+
+        .booking-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .booking-steps {
+            list-style: none;
+        }
+
+        .booking-steps li {
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .booking-img {
+            flex: 1 1 400px;
+        }
+
+        .booking-img img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 50px 10%;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-card {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            padding: 50px 10%;
+            background-color: #1e2a78;
+            color: #fff;
+            display: flex;
+        }
+
+        footer .right {
+            margin-left: 45px;
+        }
+
+        footer .left,
+        .right {
+            display: flex;
+            flex-direction: row;
+            gap: 80px;
+        }
+
+        footer .col h2 {
+            margin-bottom: 15px;
+        }
+
+        footer .col h3 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        footer a {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .store-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            transition: transform 0.2s;
+        }
+
+        .store-button:hover {
+            transform: scale(1.05);
+        }
+
+        .google-play {
+            background-color: #ff6b6b;
+            color: #fff;
+            /* Google Play blue */
+        }
+
+        .app-store {
+            background-color: #ff6b6b;
+            color: #fff;
+            /* Apple black */
+        }
+
+        footer input[type="email"] {
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+            width: 100px;
+        }
+
+        footer button {
+            padding: 10px;
+            border-radius: 0 5px 5px 0;
+            border: none;
+            background-color: #ff6b6b;
+            color: #fff;
+        }
+
+        .end {
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media(max-width: 900px) {
+            .hero {
+                flex-direction: column;
+            }
+
+            .booking {
+                flex-direction: column;
+            }
+
+            .services-cards,
+            .dest-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Jadoo</div>
+        <nav>
+            <a href="#">Destinations</a>
+            <a href="#">Hotels</a>
+            <a href="#">Flights</a>
+            <a href="#">Bookings</a>
+            <a href="#">Login</a>
+            <a href="#" class="signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <p class="red">BEST DESTINATIONS AROUND THE WORLD</p>
+            <h1>Travel, enjoy and live a new and full life</h1>
+            <p>Explore amazing destinations and create unforgettable memories with Jadoo.</p>
+            <button class="btn">Find out more</button>
+            <button class="btn-2"><img class="play-btn" src="./images/play-btn.jpg" alt="not avilable"> Play Demo</button>
+        </div>
+        <div class="hero-img">
+            <img src="./images/travel.jpg" alt="Traveler" width="200px" height="350px">
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <p class="p-1">CATEGORY</p>
+        <h2>We Offer Best Services</h2>
+        <div class="services-cards">
+            <div class="card">
+                <img src="./images/satellite.jpg">
+                <h3>Calculated Weather</h3>
+                <p>Get accurate weather info for all destinations.</p>
+            </div>
+            <div class="card">
+                <img src="https://img.icons8.com/color/96/airplane-take-off.png" />
+                <h3>Best Flights</h3>
+                <p>Find the most convenient and affordable flights.</p>
+            </div>
+            <div class="card">
+                <img src="https://img.icons8.com/color/96/calendar.png" />
+                <h3>Local Events</h3>
+                <p>Discover events happening during your trip.</p>
+            </div>
+            <div class="card">
+                <img src="https://img.icons8.com/color/96/settings.png" />
+                <h3>Customization</h3>
+                <p>Tailor your trips to suit your preferences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section class="destinations">
+        <p class="p-2">Top Dealing</p>
+        <h2>Top Destinations</h2>
+        <div class="dest-cards">
+            <div class="dest-card">
+                <img src="./images/rome.jpg" alt="Rome">
+                <h3>Rome, Italy</h3>
+                <p><span>➡</span>
+                    8 Days Trip</p>
+                <p>$8.42</p>
+            </div>
+            <div class="dest-card">
+                <img src="./images/london.jpg" alt="London">
+                <h3>London, UK</h3>
+                <p><span>➡</span>
+                    12 Days Trip</p>
+                <p>$14.2</p>
+            </div>
+            <div class="dest-card-3">
+                <img class="bg" src="./images/card-back.png" alt="nothing">
+                <div class="dest-card">
+                    <img src="./images/europe.jpg" alt="Europe">
+                    <h3>Full Europe</h3>
+                    <p><span>➡</span>
+                        15 Days Trip</p>
+                    <p>$15.7</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <br><br>
+    <!-- logos  -->
+    <section class="logo">
+        <div class="links">
+            <img src="./images/axon.jpg" alt="axon">
+            <img src="./images/jetstar.jpg" alt="jetstar">
+            <img class="expedia" src="./images/expedia.jpg" alt="expedia">
+            <img src="./images/Qantas.jpg" alt="qantas">
+            <p><em>Astralia</em></p>
+        </div>
+    </section>
+    <br><br>
+
+    <!-- Booking Steps -->
+    <section class="booking">
+        <div class="booking-text">
+            <h2>Book Your Next Trip In 3 Easy Steps</h2>
+            <ul class="booking-steps">
+                <li>1. Choose Destination</li>
+                <li>2. Make Payment</li>
+                <li>3. Reach Airport on Selected Date</li>
+            </ul>
+        </div>
+        <div class="booking-img">
+            <img src="./images/booking.png" alt="Trip" width="120px" height="350px">
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What People Say About Us</h2>
+        <div class="testimonial-card">
+            "Amazing experience! Everything was seamless and well-organized."
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="left">
+            <div class="col">
+                <h2>Jadoo.</h2>
+                <p>Lorem ipsum dolor sit amet voluptate libero quisquam,
+                    <br>sit amet voluptate natus mollitia culpa est.
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="col">
+                <h3>Company</h3>
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Mobile</a>
+            </div>
+            <div class="col">
+                <h3>Contact</h3>
+                <a href="#">Help/FAQ</a>
+                <a href="#">Press</a>
+                <a href="#">Affiliates</a>
+            </div>
+            <div class="col">
+                <h3>More</h3>
+                <a href="#">Airlinefees</a>
+                <a href="#">Airline</a>
+                <a href="#">Low fare- tips</a>
+            </div>
+            <div class="col">
+                <h3>Discover our app from:</h3>
+                <a href="https://play.google.com/store" target="_blank" class="store-button google-play">
+                    <span>⬇ Play Store</span>
+                </a>
+                <a href="https://www.apple.com/app-store/" target="_blank" class="store-button app-store">
+                    <span>⬇ Apple Store</span>
+                </a>
+
+
+                <!-- <a href="#">.play store</a>
+            <a href="#">.apple store</a> -->
+            </div>
+            <div class="col">
+                <h3>Subscribe</h3>
+                <div style="display:flex;">
+                    <input type="email" placeholder="Your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+
+        </div>
+
+    </footer><br>
+    <p class="end">All rights reserved@jadoo.co</p>
+</body>
+
+</html>
