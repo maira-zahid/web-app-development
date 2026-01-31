@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class no 15</title>
+    <style>
+        .row-1,
+        .row-2,
+        .row-3 {
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+        }
+
+        img {
+            cursor: pointer;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        img:hover {
+            /* overlay the term to know */
+            /* 1- position: absolute or position: fixed
+        2-  top, left, right, bottom
+         3- z-index
+        4-  Often background-color with rgba() for transparency */
+            opacity: 0.6;
+            /* opacity will always be in points  */
+        }
+
+        p {
+            position: relative;
+            top: 50px;
+            right: 170px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- keyframes ,css animation ,transform -->
+    <!-- circle ,square  -->
+    <!-- responsive (mobile ,desktop ,large)  -->
+    <h1>Explore the best of Pinterest</h1><br>
+    <h2>Browse by category</h2><br>
+    <div class="row-1">
+        <img src="./animals.jpg" alt="nothing" width="250px" height="150px">
+        <p>animals</p>
+        <img src="./art.jpg" alt="nothing" width="250px" height="150px">
+        <p>art</p>
+        <img src="./decor.jpg" alt="nothing" width="250px" height="150px">
+        <p>decor</p>
+        <img src="./animals.jpg" alt="nothing" width="250px" height="150px">
+        <p>animals</p>
+        <img src="./art.jpg" alt="nothing" width="250px" height="150px">
+        <p>art</p>
+    </div>
+    <div class="row-2" style="margin-top: 20px;">
+        <img src="./animals.jpg" alt="nothing" width="250px" height="150px">
+        <p>animals</p>
+        <img src="./art.jpg" alt="nothing" width="250px" height="150px">
+        <p>art</p>
+        <img src="./decor.jpg" alt="nothing" width="250px" height="150px">
+        <p>decor</p>
+        <img src="./animals.jpg" alt="nothing" width="250px" height="150px">
+        <p>animals</p>
+        <img src="./art.jpg" alt="nothing" width="250px" height="150px">
+        <p>art</p>
+    </div>
+    <div class="row-3" style="margin-top: 20px;">
+        <img src="./decor.jpg" alt="nothing" width="250px" height="150px">
+        <p>decor</p>
+        <img src="./animals.jpg" alt="nothing" width="250px" height="150px">
+        <p>animals</p>
+        <img src="./art.jpg" alt="nothing" width="250px" height="150px">
+        <p>art</p>
+    </div>
+
+</body>
+
+</html>
