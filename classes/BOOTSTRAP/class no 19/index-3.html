@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class no 10</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root{
+            --primary-bg-color: rgb(46, 77, 46);
+            --btn-primary : red !important;
+        }
+        .btn-primary {
+            background-color: var(--btn-primary);
+        }
+
+        body {
+            background-color:  white;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 65px;
+            color: var(--primary-bg-color);
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            margin-top: 10px;
+        }
+
+        .custom-btn {
+            margin-top: 37px;
+            width: 175px;
+            height: 70px;
+            border-radius: 16px;
+            padding: 20px 30px;
+            background-color: #20B15A;
+            border: none;
+            font-weight: 500;
+            font-size: 20px;
+            color: white;
+        }
+
+        .hero-img {
+            width: 684px;
+            height: 564px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- grid -->
+    <!-- column -> 12 , row  -->
+
+    <div class="container mt-4">
+        <div class="row align-items-center justify-content-center">
+
+            <!-- Left Side -->
+            <div class="row  d-flex flex-column justify-content-center">
+                <h1>
+                    Increase Your <br>
+                    Customers Loyalty <br>
+                    and Satisfaction
+                </h1>
+
+                <p>
+                    We help businesses like yours earn more customers, <br>
+                    standout from competitors, make more money
+                </p>
+
+                <button class="custom-btn">
+                    Get Started
+                </button>
+            </div>
+
+            <div class="col-6">
+                <h1>Column no 02</h1>
+                <button class="btn btn-primary">hello</button>
+            </div>
+            <!-- Right Side -->
+            <div class="col-4 text-center">
+                <img src="./booking.png" alt="" class="hero-img img-fluid">
+            </div>
+
+        </div>
+    </div>
+
+
+
+     <!-- today  -->
+           <!-- search : talvent and bootstrap difference +
+        change your code into bootstrap code by ChatGPT -->
+
+         <!-- alighn item for column , justify content for row  -->
+
+          <!-- grid k through col manage kr sakte h  -->
+
+           <!-- save bootstrap.min.css file 
+            format document 
+            learn variables like z=x+y  left = variable , right = value
+            ->    variable gloable
+            
+            button = red
+            heading = brown
+            paragraph = yellow
+            to make var we use :root
+
+            write code:
+            :root{
+            css variable online
+            }
+            body{
+            color: var(copied css variable)
+            }
+            color theme change krne k liye first var bna le then var ki value class ko de dein 
+            -->
+            
+            <!-- important! test of CSS  -->
+</body>
+
+</html>

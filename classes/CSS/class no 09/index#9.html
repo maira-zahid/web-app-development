@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class no 9</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+.container{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    /* top,left,right,bottom dene k liye position dena zarooori h  */
+    position: relative;
+    /* z-index is used to give priority (jahan age show krna ho) */
+    /* z-index: 1;  */
+    /* px (pixel)  */
+}
+.main-container{
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    /* absolute for priority  */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.box{
+    background-color: rgb(217, 255, 217);
+    border: 1px solid green;
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    padding-block: 20px;
+    position: relative;
+}
+#para{
+    /* position: sticky;
+    top: 0px;
+    make multiple div s and select a separate p tag  */
+    position: absolute;
+    background-color: darkgreen;
+    top: 15px;
+    left: 80px;
+    padding: 5px;
+    border-radius: 40px;
+    color: white;
+    font-size: 10px;
+}
+    </style>
+</head>
+<body>
+    <!-- figma desighns  -->
+     <!-- sticky (to take navbar even after scroll) -->
+    <!-- <div class="container">
+
+    </div>
+    <div class="main-container">
+
+    </div> -->
+    <div class="box">
+        
+        <h1>4 Packages</h1>
+        <p> four package and bundles</p>
+    </div>
+    <p id="para">PACKAGES NO 04</p>
+
+</body>
+</html>

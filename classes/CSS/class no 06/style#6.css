@@ -1,0 +1,28 @@
+.hero-main{
+    background-color: black;
+    color: white;
+    padding-inline: 30px;
+    padding-block: 40px;
+    text-align: center;
+}
+.button{
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#hero-btn1{
+    background-color: #974afc;
+    color: white;
+}
+#hero-heading{
+    font-size: 80px;
+    font-family: sans-serif;
+}
+#hero-para{
+    width: 600px;
+    margin-left: 350px;
+}
+#sub-para{
+    display: inline-block;
+}

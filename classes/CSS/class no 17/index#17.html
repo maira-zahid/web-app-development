@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class no 17</title>
+    <style>
+        *{
+            /* i we are using rem and em (depends on parent div) units we have to define font size of whole website  */
+            font-size: 20px;
+            /* 10 or 5 are also use for simple and easy calculation  */
+        }
+        /* p{
+            font-size: 1rem;
+        }
+        1 rem = 20px 
+        2 rem = 40px
+        3 rem = 60px
+        .parent-1{
+            font-size: 1em;
+        }
+        .parent-1 .child{
+            font-size: 1em;
+        } */
+         /* clamp() [mostly help in responsive]
+         structure
+         padding: clamp(min-width , calculation , max-width) 
+         4% 4/100 vw (view width)
+         calculate vw  : 4/100 x 411(suppose) */
+         .parent-2{
+            border: 1px solid black;
+            padding: clamp(10px , 4vw , 40px);
+         }
+
+    </style>
+</head>
+<body>
+    <!-- default font size = 16 px  -->
+     <!-- rem  -->
+    <!-- <p>Class no 17</p> -->
+    <!-- <div class="parent1">
+        <div class="child">
+           Child
+        </div>
+    </div> -->
+    <div class="parent-2">
+        <h2>Standard font</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum velit at perspiciatis illum  fugiat minima.
+             Aspernatur officiis repudiandae,consequatur distinctio facilis quo? Est obcaecati iste maiores, error veniam debitis molestiae.</p>
+    </div>
+   
+
+</body>
+</html>

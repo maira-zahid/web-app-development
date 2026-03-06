@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class no 13</title>
+    <style>
+        /* prac  */
+        /* input[type=text]{
+            width: 50% ;
+            padding: 30px;
+            border: 10px solid red;
+        }
+        input[type=text]:focus{
+            outline: none;
+            border: 10px solid green; 
+        }  */
+        /* rread and learn */
+        /* use grid for complex but mostly use flex
+         grid templates
+         grid area
+         align self
+         alighn items
+         css important rule
+          */
+          #container{
+            border: 1px solid wheat;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: row;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding-left: 20px;
+            padding-bottom: 15px;
+            justify-content: center;
+          }
+          img{
+            margin-top: 110px;
+          }
+    </style>
+</head>
+
+<body>
+    <!-- prac  -->
+    <!-- <input type="text">
+    <input type="password">
+    <button>Submit</button> -->
+    <form id="container">
+        <div>
+            <h1>Get in touch with us</h1><br>
+            <label for="fname">FULL NAME</label><br>
+            <input type="text"><br>
+            <label for="email">EMAIL</label><br>
+            <input type="email"><br>
+            <label for="subject">SUBJECT</label><br>
+            <input type="subject"><br>
+            <label for="message">message</label><br>
+            <input type="message"><br><br>
+            <button>Send messages</button>
+        </div>
+        <div>
+            <img src="./img.jpg" alt="not available" width="150px" height="150px">
+        </div>
+    </form>
+</body>
+</html>

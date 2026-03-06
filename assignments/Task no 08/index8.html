@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0e9ad6;
+        }
+
+        .card {
+            width: 360px;
+            background: linear-gradient(180deg, #1fb6ff, #149ed8);
+            border-radius: 18px;
+            padding: 28px 22px 30px;
+            color: #fff;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .card h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .card .para-1 {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 22px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .info-box .icon {
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            color: #149ed8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .info-box span {
+            font-size: 12px;
+            opacity: 0.8;
+            display: block;
+        }
+
+        .info-box strong {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .stats {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            padding: 14px 16px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin: 26px 0 22px;
+        }
+
+        .stat h2 {
+            margin-bottom: 4px;
+        }
+
+        .stat p {
+            font-size: 11px;
+            opacity: 0.8;
+            letter-spacing: 0.5px;
+            /* letter spacing = extra horizontal space  */
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer span {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .icons a {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 15px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="tag">
+            <i class="fa-regular fa-comment-dots"></i>
+            GET IN TOUCH
+        </div>
+
+        <h1>Let's Bring Your Vision to Life</h1>
+
+        <p class="para-1">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores.
+        </p>
+
+        <div class="info-box">
+            <div class="icon">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+                <span>EMAIL US</span>
+                <strong>support@example.com</strong>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+                <span>CALL US</span>
+                <strong>+1 (555) 890-1234</strong>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+                <span>VISIT US</span>
+                <strong>1847 Oak Avenue, Portland, OR 97201</strong>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <h2>98%</h2>
+                <p>SATISFACTION</p>
+            </div>
+            <div class="stat">
+                <h2>24/7</h2>
+                <p>SUPPORT</p>
+            </div>
+            <div class="stat">
+                <h2>3.2k</h2>
+                <p>PROJECTS</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>Follow Us</span>
+            <div class="icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
