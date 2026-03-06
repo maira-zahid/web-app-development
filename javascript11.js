@@ -208,3 +208,27 @@ console.log(result)
 // Concept of if , else are used in above examples
 // Switch case
 // this is used to perform different actions based on different conditions
+let operator = "+"
+let first = 10
+let second = 5
+
+switch(operator) {
+  case "+":
+    console.log(first + second)
+    break
+
+  case "-":
+    console.log(first - second)
+    break
+
+  case "*":
+    console.log(first * second)
+    break
+
+  case "/":
+    console.log(first / second )
+    break
+
+  default:
+    console.log("Invalid operator")
+} 
